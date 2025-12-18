@@ -14,6 +14,11 @@ const noteSchema = new Schema(
       required: false,
       enum: Object.values(TAGS),
     },
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
   },
   {
     versionKey: false,
